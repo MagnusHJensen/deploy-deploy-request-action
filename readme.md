@@ -13,7 +13,7 @@ These values will be used to authenticate to the PlanetScale service.
 
 ## Example
 
-The following example will create a deploy request for the `recipes_db` database when a pull request is closed.
+The following example will deploy a deploy request for the `recipes_db` database when a pull request is closed.
 
 ```yml
 name: Deploy a deploy request
@@ -32,7 +32,7 @@ jobs:
         with:
           org_name: bmorrison-ps
           database_name: recipes_db
-          branch_name: dev
+          number: 1
         env:
           PLANETSCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANETSCALE_SERVICE_TOKEN_ID }}
           PLANETSCALE_SERVICE_TOKEN: ${{ secrets.PLANETSCALE_SERVICE_TOKEN }}
